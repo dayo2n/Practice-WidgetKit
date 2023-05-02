@@ -29,6 +29,13 @@
 		AD22946829FE53B2009D8A78 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD22946729FE53B2009D8A78 /* GoogleService-Info.plist */; };
 		AD9423692A00EFE00009678C /* WidgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9423682A00EFE00009678C /* WidgetViewModel.swift */; };
 		AD94236C2A00F1270009678C /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94236B2A00F1270009678C /* ImageUploader.swift */; };
+		AD9423742A00F43F0009678C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9423732A00F43F0009678C /* WidgetKit.framework */; };
+		AD9423762A00F43F0009678C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9423752A00F43F0009678C /* SwiftUI.framework */; };
+		AD9423792A00F43F0009678C /* WidgetYomangBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9423782A00F43F0009678C /* WidgetYomangBundle.swift */; };
+		AD94237B2A00F43F0009678C /* WidgetYomangLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94237A2A00F43F0009678C /* WidgetYomangLiveActivity.swift */; };
+		AD94237D2A00F43F0009678C /* WidgetYomang.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94237C2A00F43F0009678C /* WidgetYomang.swift */; };
+		AD94237F2A00F4400009678C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD94237E2A00F4400009678C /* Assets.xcassets */; };
+		AD9423832A00F4400009678C /* WidgetYomangExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AD9423712A00F43F0009678C /* WidgetYomangExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +53,28 @@
 			remoteGlobalIDString = AD22942029FE527D009D8A78;
 			remoteInfo = Demo0404;
 		};
+		AD9423812A00F4400009678C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD22941929FE527D009D8A78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD9423702A00F43F0009678C;
+			remoteInfo = WidgetYomangExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AD9423872A00F4400009678C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AD9423832A00F4400009678C /* WidgetYomangExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AD22942129FE527D009D8A78 /* Demo0404.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo0404.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +94,14 @@
 		AD22946729FE53B2009D8A78 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD9423682A00EFE00009678C /* WidgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetViewModel.swift; sourceTree = "<group>"; };
 		AD94236B2A00F1270009678C /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		AD9423712A00F43F0009678C /* WidgetYomangExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetYomangExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD9423732A00F43F0009678C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		AD9423752A00F43F0009678C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		AD9423782A00F43F0009678C /* WidgetYomangBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetYomangBundle.swift; sourceTree = "<group>"; };
+		AD94237A2A00F43F0009678C /* WidgetYomangLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetYomangLiveActivity.swift; sourceTree = "<group>"; };
+		AD94237C2A00F43F0009678C /* WidgetYomang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetYomang.swift; sourceTree = "<group>"; };
+		AD94237E2A00F4400009678C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AD9423802A00F4400009678C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +134,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AD94236E2A00F43F0009678C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD9423762A00F43F0009678C /* SwiftUI.framework in Frameworks */,
+				AD9423742A00F43F0009678C /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -107,6 +152,8 @@
 				AD22942329FE527D009D8A78 /* Demo0404 */,
 				AD22943429FE527E009D8A78 /* Demo0404Tests */,
 				AD22943E29FE527E009D8A78 /* Demo0404UITests */,
+				AD9423772A00F43F0009678C /* WidgetYomang */,
+				AD9423722A00F43F0009678C /* Frameworks */,
 				AD22942229FE527D009D8A78 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,6 +164,7 @@
 				AD22942129FE527D009D8A78 /* Demo0404.app */,
 				AD22943129FE527E009D8A78 /* Demo0404Tests.xctest */,
 				AD22943B29FE527E009D8A78 /* Demo0404UITests.xctest */,
+				AD9423712A00F43F0009678C /* WidgetYomangExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -196,6 +244,27 @@
 			name = API;
 			sourceTree = "<group>";
 		};
+		AD9423722A00F43F0009678C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD9423732A00F43F0009678C /* WidgetKit.framework */,
+				AD9423752A00F43F0009678C /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD9423772A00F43F0009678C /* WidgetYomang */ = {
+			isa = PBXGroup;
+			children = (
+				AD9423782A00F43F0009678C /* WidgetYomangBundle.swift */,
+				AD94237A2A00F43F0009678C /* WidgetYomangLiveActivity.swift */,
+				AD94237C2A00F43F0009678C /* WidgetYomang.swift */,
+				AD94237E2A00F4400009678C /* Assets.xcassets */,
+				AD9423802A00F4400009678C /* Info.plist */,
+			);
+			path = WidgetYomang;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -206,10 +275,12 @@
 				AD22941D29FE527D009D8A78 /* Sources */,
 				AD22941E29FE527D009D8A78 /* Frameworks */,
 				AD22941F29FE527D009D8A78 /* Resources */,
+				AD9423872A00F4400009678C /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AD9423822A00F4400009678C /* PBXTargetDependency */,
 			);
 			name = Demo0404;
 			packageProductDependencies = (
@@ -262,6 +333,23 @@
 			productReference = AD22943B29FE527E009D8A78 /* Demo0404UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		AD9423702A00F43F0009678C /* WidgetYomangExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD9423842A00F4400009678C /* Build configuration list for PBXNativeTarget "WidgetYomangExtension" */;
+			buildPhases = (
+				AD94236D2A00F43F0009678C /* Sources */,
+				AD94236E2A00F43F0009678C /* Frameworks */,
+				AD94236F2A00F43F0009678C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WidgetYomangExtension;
+			productName = WidgetYomangExtension;
+			productReference = AD9423712A00F43F0009678C /* WidgetYomangExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -282,6 +370,9 @@
 					AD22943A29FE527E009D8A78 = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = AD22942029FE527D009D8A78;
+					};
+					AD9423702A00F43F0009678C = {
+						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
@@ -304,6 +395,7 @@
 				AD22942029FE527D009D8A78 /* Demo0404 */,
 				AD22943029FE527E009D8A78 /* Demo0404Tests */,
 				AD22943A29FE527E009D8A78 /* Demo0404UITests */,
+				AD9423702A00F43F0009678C /* WidgetYomangExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -330,6 +422,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD94236F2A00F43F0009678C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD94237F2A00F4400009678C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +468,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AD94236D2A00F43F0009678C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD9423792A00F43F0009678C /* WidgetYomangBundle.swift in Sources */,
+				AD94237D2A00F43F0009678C /* WidgetYomang.swift in Sources */,
+				AD94237B2A00F43F0009678C /* WidgetYomangLiveActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -380,6 +490,11 @@
 			isa = PBXTargetDependency;
 			target = AD22942029FE527D009D8A78 /* Demo0404 */;
 			targetProxy = AD22943C29FE527E009D8A78 /* PBXContainerItemProxy */;
+		};
+		AD9423822A00F4400009678C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD9423702A00F43F0009678C /* WidgetYomangExtension */;
+			targetProxy = AD9423812A00F4400009678C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -501,6 +616,7 @@
 		AD22944629FE527E009D8A78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +646,7 @@
 		AD22944729FE527E009D8A78 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -632,6 +749,60 @@
 			};
 			name = Release;
 		};
+		AD9423852A00F4400009678C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7D5PZJWQ9T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetYomang/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WidgetYomang;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pos.academy.Demo0404.WidgetYomang;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AD9423862A00F4400009678C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7D5PZJWQ9T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetYomang/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WidgetYomang;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pos.academy.Demo0404.WidgetYomang;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -667,6 +838,15 @@
 			buildConfigurations = (
 				AD22944C29FE527E009D8A78 /* Debug */,
 				AD22944D29FE527E009D8A78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD9423842A00F4400009678C /* Build configuration list for PBXNativeTarget "WidgetYomangExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD9423852A00F4400009678C /* Debug */,
+				AD9423862A00F4400009678C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
