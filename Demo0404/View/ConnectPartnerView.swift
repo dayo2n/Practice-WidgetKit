@@ -23,7 +23,7 @@ struct ConnectPartnerView: View {
                 Text("연인과 연결하기")
                 TextField("연인코드", text: $partnerCode)
                 Button("연결") {
-                    AuthViewModel.shared.connect {
+                    AuthViewModel.shared.connect(partnerCode: partnerCode) {
                         
                     }
                 }

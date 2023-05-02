@@ -22,7 +22,11 @@ struct ContentView: View {
                     }
             } else {
                 if let user = viewModel.currentUser {
-                    UploadImageView()
+                    if user.connected {
+                        UploadImageView()
+                    } else {
+                        ConnectPartnerView()
+                    }
                 }
             }
         }

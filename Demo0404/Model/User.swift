@@ -13,4 +13,5 @@ struct User: Identifiable, Decodable {
     var uuid: String
     var code: String
     var partnerCode: String
+    var connected: Bool
 }

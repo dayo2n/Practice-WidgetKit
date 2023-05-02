@@ -22,17 +22,17 @@ class AuthViewModel: ObservableObject {
     func fetchUser() {
         guard let uid = userSession?.uid else { return }
         print("=== DEBUG: fetch userSession uid \(uid)")
+        
         Database.database().reference().ref.child("users/\(uid)").getData { error, snapshot in
             if let err = error {
                 print("== DEBUG: \(err.localizedDescription)")
             }
+            
             print("=== SNAPSHOT: \(snapshot?.value)")
+            // TODO: snapshot data JSONDecoder로 디코딩
             if let value = snapshot?.value as? [String: Any] {
-                
-                print("=== SNAPSHOT as [String: Any]: \(value)")
-                let user = User(uuid: value["uuid"] as! String, code: value["code"] as! String, partnerCode: value["partnerCode"] as! String)
+                let user = User(uuid: value["uuid"] as! String, code: value["code"] as! String, partnerCode: value["partnerCode"] as! String, connected: value["connected"] as! Bool)
                 self.currentUser = user
-                print("=== DEBUG: fetch current user as User.self \(self.currentUser)")
             }
         }
     }
@@ -51,7 +51,8 @@ class AuthViewModel: ObservableObject {
             
             let data = ["uuid": uuid,
                         "code": user.uid,
-                        "partnerCode": ""]
+                        "partnerCode": "",
+                        "connected": false]
             
             Database.database().reference().ref.child("users").child(user.uid).setValue(data) { error, ref  in
                 if let error = error {
@@ -68,7 +69,36 @@ class AuthViewModel: ObservableObject {
         return UIDevice.current.identifierForVendor?.uuidString
     }
     
-    func connect(_ completion: @escaping() -> Void?) {
+    func connect(partnerCode: String, _ completion: @escaping() -> Void?) {
+        guard let uid = userSession?.uid else { return }
+        
+        // TODO: 1. partnerCode DB 업데이트하고
+        Database.database().reference().ref.child("users/\(uid)/").updateChildValues(["partnerCode": partnerCode]) { error, ref in
+            if let error = error {
+                print("== DEBUG: 파트너코드 등록 오류 \(error)")
+            } else {
+                print("== DEBUG: 파트너코드 등록 성공!")
+                self.currentUser?.partnerCode = partnerCode
+            }
+            
+            // TODO: 2. 파트너가 나를 등록하여 대기중인지 확인
+            Database.database().reference().ref.child("users/\(partnerCode)").getData { error, snapshot in
+                if let err = error {
+                    print("== DEBUG: 파트너코드 오타, 오류 확인필 \(err.localizedDescription)")
+                }
+                
+                print("=== SNAPSHOT: \(snapshot?.value)")
+                if let partnerValue = snapshot?.value as? [String: Any] {
+                    if partnerValue["partnerCode"] as! String == uid {
+                        self.currentUser?.connected = true
+                        Database.database().reference().ref.child("users/\(uid)/").updateChildValues(["connected": true])
+                        Database.database().reference().ref.child("users/\(partnerCode)/").updateChildValues(["connected": true])
+                    } else {
+                        print("== DEBUG: connect 실패. 파트너코드가 서로 매치되지 않거나 상대가 아직 등록하지 않아 대기중인 상태")
+                    }
+                }
+            }
+        }
     }
     
     /**
