@@ -6,12 +6,11 @@
 //
 
 import Foundation
-import FirebaseFirestoreSwift
 
-struct User: Identifiable, Decodable {
-    @DocumentID var id: String?
-    var uuid: String
-    var code: String
+struct User {
+    let uuid: String
+    let code: String
     var partnerCode: String
     var connected: Bool
+    var imageUrl: String?
 }

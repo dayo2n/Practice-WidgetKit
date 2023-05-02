@@ -11,6 +11,7 @@ import PhotosUI
 struct UploadImageView: View {
     @State private var selectedItem: PhotosPickerItem?
     @State private var selectedImage: Image?
+    @ObservedObject private var viewModel = WidgetViewModel()
     var body: some View {
         VStack {
             ZStack {
@@ -39,10 +40,14 @@ struct UploadImageView: View {
                 if let data = try? await selectedItem?.loadTransferable(type: Data.self) {
                     if let image = UIImage(data: data) {
                         selectedImage = Image(uiImage: image)
-                        return
+                        viewModel.uploadImage(image: image) {
+                            return
+                        }
                     }
+                } else {
+                    // TODO: 보관함의 가장 최근 사진을 선택하면 fail to load
+                    print("== DEBUG: Failed to load image")
                 }
-                print("== DEBUG: Failed to load image")
             }
         }
     }

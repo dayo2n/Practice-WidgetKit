@@ -27,6 +27,8 @@
 		AD22946429FE5317009D8A78 /* ConnectPartnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD22946329FE5317009D8A78 /* ConnectPartnerView.swift */; };
 		AD22946629FE5339009D8A78 /* UploadImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD22946529FE5339009D8A78 /* UploadImageView.swift */; };
 		AD22946829FE53B2009D8A78 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD22946729FE53B2009D8A78 /* GoogleService-Info.plist */; };
+		AD9423692A00EFE00009678C /* WidgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9423682A00EFE00009678C /* WidgetViewModel.swift */; };
+		AD94236C2A00F1270009678C /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94236B2A00F1270009678C /* ImageUploader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		AD22946329FE5317009D8A78 /* ConnectPartnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectPartnerView.swift; sourceTree = "<group>"; };
 		AD22946529FE5339009D8A78 /* UploadImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageView.swift; sourceTree = "<group>"; };
 		AD22946729FE53B2009D8A78 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AD9423682A00EFE00009678C /* WidgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetViewModel.swift; sourceTree = "<group>"; };
+		AD94236B2A00F1270009678C /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 		AD22942329FE527D009D8A78 /* Demo0404 */ = {
 			isa = PBXGroup;
 			children = (
+				AD94236A2A00F1120009678C /* API */,
 				AD22942429FE527D009D8A78 /* Demo0404App.swift */,
 				AD22946729FE53B2009D8A78 /* GoogleService-Info.plist */,
 				AD22946B29FE5421009D8A78 /* ViewModel */,
@@ -178,8 +183,17 @@
 			isa = PBXGroup;
 			children = (
 				AD22945F29FE52E9009D8A78 /* AuthViewModel.swift */,
+				AD9423682A00EFE00009678C /* WidgetViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AD94236A2A00F1120009678C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AD94236B2A00F1270009678C /* ImageUploader.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +344,8 @@
 				AD22946429FE5317009D8A78 /* ConnectPartnerView.swift in Sources */,
 				AD22942729FE527D009D8A78 /* ContentView.swift in Sources */,
 				AD22942529FE527D009D8A78 /* Demo0404App.swift in Sources */,
+				AD9423692A00EFE00009678C /* WidgetViewModel.swift in Sources */,
+				AD94236C2A00F1270009678C /* ImageUploader.swift in Sources */,
 				AD22946029FE52E9009D8A78 /* AuthViewModel.swift in Sources */,
 				AD22946629FE5339009D8A78 /* UploadImageView.swift in Sources */,
 			);
