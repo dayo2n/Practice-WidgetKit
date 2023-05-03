@@ -12,6 +12,7 @@ struct UploadImageView: View {
     @State private var selectedItem: PhotosPickerItem?
     @State private var selectedImage: Image?
     @ObservedObject private var viewModel = WidgetViewModel()
+    
     var body: some View {
         VStack {
             ZStack {

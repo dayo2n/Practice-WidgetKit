@@ -20,8 +20,9 @@ class WidgetViewModel: ObservableObject {
             Database.database().reference().ref.child("users/\(uid)/").updateChildValues(["imageUrl": imageUrl]) { error, ref in
                 if let error = error {
                     print("== DEBUG: image 업로드 및 DB에 image url 업데이트 실패")
+                } else {
+                    print("== DEBUG: image 업로드 및 DB에 image url 업데이트 성공")
                 }
-                print("== DEBUG: image 업로드 및 DB에 image url 업데이트 성공")
             }
         }
     }

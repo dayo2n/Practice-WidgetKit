@@ -36,6 +36,8 @@
 		AD94237D2A00F43F0009678C /* WidgetYomang.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD94237C2A00F43F0009678C /* WidgetYomang.swift */; };
 		AD94237F2A00F4400009678C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD94237E2A00F4400009678C /* Assets.xcassets */; };
 		AD9423832A00F4400009678C /* WidgetYomangExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AD9423712A00F43F0009678C /* WidgetYomangExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AD94238A2A00F5600009678C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AD9423892A00F5600009678C /* Kingfisher */; };
+		AD9423962A0102E80009678C /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9423952A0102E80009678C /* UserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,9 @@
 		AD94237C2A00F43F0009678C /* WidgetYomang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetYomang.swift; sourceTree = "<group>"; };
 		AD94237E2A00F4400009678C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD9423802A00F4400009678C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD9423912A00FB670009678C /* Demo0404.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Demo0404.entitlements; sourceTree = "<group>"; };
+		AD9423922A00FC8D0009678C /* WidgetYomangExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetYomangExtension.entitlements; sourceTree = "<group>"; };
+		AD9423952A0102E80009678C /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +117,7 @@
 				AD22945829FE52C2009D8A78 /* FirebaseDatabaseSwift in Frameworks */,
 				AD22945229FE52C2009D8A78 /* FirebaseAnalyticsSwift in Frameworks */,
 				AD22945429FE52C2009D8A78 /* FirebaseAuth in Frameworks */,
+				AD94238A2A00F5600009678C /* Kingfisher in Frameworks */,
 				AD22945C29FE52C2009D8A78 /* FirebaseFirestoreSwift in Frameworks */,
 				AD22945629FE52C2009D8A78 /* FirebaseDatabase in Frameworks */,
 				AD22945E29FE52C2009D8A78 /* FirebaseStorage in Frameworks */,
@@ -149,6 +155,7 @@
 		AD22941829FE527D009D8A78 = {
 			isa = PBXGroup;
 			children = (
+				AD9423922A00FC8D0009678C /* WidgetYomangExtension.entitlements */,
 				AD22942329FE527D009D8A78 /* Demo0404 */,
 				AD22943429FE527E009D8A78 /* Demo0404Tests */,
 				AD22943E29FE527E009D8A78 /* Demo0404UITests */,
@@ -172,6 +179,7 @@
 		AD22942329FE527D009D8A78 /* Demo0404 */ = {
 			isa = PBXGroup;
 			children = (
+				AD9423912A00FB670009678C /* Demo0404.entitlements */,
 				AD94236A2A00F1120009678C /* API */,
 				AD22942429FE527D009D8A78 /* Demo0404App.swift */,
 				AD22946729FE53B2009D8A78 /* GoogleService-Info.plist */,
@@ -240,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				AD94236B2A00F1270009678C /* ImageUploader.swift */,
+				AD9423952A0102E80009678C /* UserDefaults.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -292,6 +301,7 @@
 				AD22945929FE52C2009D8A78 /* FirebaseFirestore */,
 				AD22945B29FE52C2009D8A78 /* FirebaseFirestoreSwift */,
 				AD22945D29FE52C2009D8A78 /* FirebaseStorage */,
+				AD9423892A00F5600009678C /* Kingfisher */,
 			);
 			productName = Demo0404;
 			productReference = AD22942129FE527D009D8A78 /* Demo0404.app */;
@@ -387,6 +397,7 @@
 			mainGroup = AD22941829FE527D009D8A78;
 			packageReferences = (
 				AD22944E29FE52C2009D8A78 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				AD9423882A00F5600009678C /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = AD22942229FE527D009D8A78 /* Products */;
 			projectDirPath = "";
@@ -445,6 +456,7 @@
 				AD22942729FE527D009D8A78 /* ContentView.swift in Sources */,
 				AD22942529FE527D009D8A78 /* Demo0404App.swift in Sources */,
 				AD9423692A00EFE00009678C /* WidgetViewModel.swift in Sources */,
+				AD9423962A0102E80009678C /* UserDefaults.swift in Sources */,
 				AD94236C2A00F1270009678C /* ImageUploader.swift in Sources */,
 				AD22946029FE52E9009D8A78 /* AuthViewModel.swift in Sources */,
 				AD22946629FE5339009D8A78 /* UploadImageView.swift in Sources */,
@@ -619,6 +631,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Demo0404/Demo0404.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Demo0404/Preview Content\"";
@@ -649,6 +662,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Demo0404/Demo0404.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Demo0404/Preview Content\"";
@@ -754,6 +768,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WidgetYomangExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7D5PZJWQ9T;
@@ -781,6 +796,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WidgetYomangExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7D5PZJWQ9T;
@@ -862,6 +878,14 @@
 				kind = branch;
 			};
 		};
+		AD9423882A00F5600009678C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -904,6 +928,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AD22944E29FE52C2009D8A78 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		AD9423892A00F5600009678C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD9423882A00F5600009678C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

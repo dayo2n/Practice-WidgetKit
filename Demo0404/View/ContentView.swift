@@ -10,11 +10,12 @@ import SwiftUI
 struct ContentView: View {
     
     @EnvironmentObject var viewModel: AuthViewModel
+    let timer = Timer.publish(every: 15, on: .main, in: .common).autoconnect()
     
     var body: some View {
         ZStack {
             if viewModel.userSession == nil {
-                ConnectPartnerView()
+                Text("LOGO")
                     .onAppear {
                         viewModel.signInAnonymously {
 
@@ -25,7 +26,7 @@ struct ContentView: View {
                     if user.connected {
                         UploadImageView()
                     } else {
-                        ConnectPartnerView()
+                        ConnectPartnerView(user: user)
                     }
                 }
             }
@@ -33,7 +34,23 @@ struct ContentView: View {
         .onAppear {
             print("here \(viewModel.currentUser)")
 //            AuthViewModel.shared.signOut()
+            if let user = viewModel.currentUser {
+                if user.connected {
+                    viewModel.getImageUrl { imageUrl in
+                        print(imageUrl)
+                    }
+                }
+            }
         }
+//        .onReceive(timer, perform: { _ in
+//            if let user = viewModel.currentUser {
+//                if user.connected {
+//                    viewModel.getImageUrl { imageUrl in
+//                        print(imageUrl)
+//                    }
+//                }
+//            }
+//        })
     }
 }
 

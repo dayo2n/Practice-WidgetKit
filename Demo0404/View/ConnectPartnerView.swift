@@ -9,15 +9,14 @@ import SwiftUI
 
 struct ConnectPartnerView: View {
     
-//    let user: User
+    let user: User
     @State private var partnerCode = ""
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 Text("내코드")
-                Text("kPu6KX")
-    //            Text("\(user.code)")
+                Text("\(user.code)")
             }
             HStack {
                 Text("연인과 연결하기")
@@ -30,11 +29,5 @@ struct ConnectPartnerView: View {
             }
         }
         .padding(.horizontal)
-    }
-}
-
-struct ConnectPartnerView_Previews: PreviewProvider {
-    static var previews: some View {
-        ConnectPartnerView()
     }
 }
