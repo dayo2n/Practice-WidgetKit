@@ -10,11 +10,11 @@ import SwiftUI
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date())
+        SimpleEntry(date: Date(), image: UIImage(named: "image") ?? UIImage())
     }
     
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date())
+        let entry = SimpleEntry(date: Date(), image: UIImage())
         completion(entry)
     }
     
@@ -23,10 +23,13 @@ struct Provider: TimelineProvider {
         
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate)
-            entries.append(entry)
+        for secondOffset in 0 ..< 10 {
+            let entryDate = Calendar.current.date(byAdding: .second, value: secondOffset, to: currentDate)!
+            if let widgetImageData = UserDefaults(suiteName: "group.Demo0404")?.data(forKey: "widgetImage"),
+               let widgetImage = UIImage(data: widgetImageData) {
+                let entry = SimpleEntry(date: entryDate, image: widgetImage)
+                entries.append(entry)
+            }
         }
         
         let timeline = Timeline(entries: entries, policy: .atEnd)
@@ -36,6 +39,7 @@ struct Provider: TimelineProvider {
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
+    let image: UIImage
 }
 
 extension UserDefaults {
@@ -47,16 +51,11 @@ extension UserDefaults {
 
 struct WidgetYomangEntryView : View {
     var entry: Provider.Entry
-    let nameUserDefaults = UserDefaults(suiteName: "group.Demo0404")
     
     var body: some View {
-        if let widgetImageData = nameUserDefaults?.data(forKey: "widgetImage"),
-           let widgetImage = UIImage(data: widgetImageData) {
-            
-            Image(uiImage: widgetImage)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-        }
+        Image(uiImage: entry.image)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
     }
 }
 
@@ -71,12 +70,5 @@ struct WidgetYomang: Widget {
         .configurationDisplayName("YOMANG")
         .description("요망이 테스트입니다")
         .supportedFamilies([.systemSmall, .systemLarge])
-    }
-}
-
-struct WidgetYomang_Previews: PreviewProvider {
-    static var previews: some View {
-        WidgetYomangEntryView(entry: SimpleEntry(date: Date()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

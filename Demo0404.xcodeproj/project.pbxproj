@@ -11,9 +11,6 @@
 		AD22942729FE527D009D8A78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD22942629FE527D009D8A78 /* ContentView.swift */; };
 		AD22942929FE527E009D8A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD22942829FE527E009D8A78 /* Assets.xcassets */; };
 		AD22942C29FE527E009D8A78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD22942B29FE527E009D8A78 /* Preview Assets.xcassets */; };
-		AD22943629FE527E009D8A78 /* Demo0404Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD22943529FE527E009D8A78 /* Demo0404Tests.swift */; };
-		AD22944029FE527E009D8A78 /* Demo0404UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD22943F29FE527E009D8A78 /* Demo0404UITests.swift */; };
-		AD22944229FE527E009D8A78 /* Demo0404UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD22944129FE527E009D8A78 /* Demo0404UITestsLaunchTests.swift */; };
 		AD22945029FE52C2009D8A78 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AD22944F29FE52C2009D8A78 /* FirebaseAnalytics */; };
 		AD22945229FE52C2009D8A78 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AD22945129FE52C2009D8A78 /* FirebaseAnalyticsSwift */; };
 		AD22945429FE52C2009D8A78 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AD22945329FE52C2009D8A78 /* FirebaseAuth */; };
@@ -85,10 +82,7 @@
 		AD22942829FE527E009D8A78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD22942B29FE527E009D8A78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AD22943129FE527E009D8A78 /* Demo0404Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Demo0404Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD22943529FE527E009D8A78 /* Demo0404Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo0404Tests.swift; sourceTree = "<group>"; };
 		AD22943B29FE527E009D8A78 /* Demo0404UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Demo0404UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD22943F29FE527E009D8A78 /* Demo0404UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo0404UITests.swift; sourceTree = "<group>"; };
-		AD22944129FE527E009D8A78 /* Demo0404UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo0404UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AD22945F29FE52E9009D8A78 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		AD22946129FE5302009D8A78 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AD22946329FE5317009D8A78 /* ConnectPartnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectPartnerView.swift; sourceTree = "<group>"; };
@@ -157,8 +151,6 @@
 			children = (
 				AD9423922A00FC8D0009678C /* WidgetYomangExtension.entitlements */,
 				AD22942329FE527D009D8A78 /* Demo0404 */,
-				AD22943429FE527E009D8A78 /* Demo0404Tests */,
-				AD22943E29FE527E009D8A78 /* Demo0404UITests */,
 				AD9423772A00F43F0009678C /* WidgetYomang */,
 				AD9423722A00F43F0009678C /* Frameworks */,
 				AD22942229FE527D009D8A78 /* Products */,
@@ -179,8 +171,8 @@
 		AD22942329FE527D009D8A78 /* Demo0404 */ = {
 			isa = PBXGroup;
 			children = (
+				ADC016A32A024A1100EB025B /* API */,
 				AD9423912A00FB670009678C /* Demo0404.entitlements */,
-				AD94236A2A00F1120009678C /* API */,
 				AD22942429FE527D009D8A78 /* Demo0404App.swift */,
 				AD22946729FE53B2009D8A78 /* GoogleService-Info.plist */,
 				AD22946B29FE5421009D8A78 /* ViewModel */,
@@ -198,23 +190,6 @@
 				AD22942B29FE527E009D8A78 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		AD22943429FE527E009D8A78 /* Demo0404Tests */ = {
-			isa = PBXGroup;
-			children = (
-				AD22943529FE527E009D8A78 /* Demo0404Tests.swift */,
-			);
-			path = Demo0404Tests;
-			sourceTree = "<group>";
-		};
-		AD22943E29FE527E009D8A78 /* Demo0404UITests */ = {
-			isa = PBXGroup;
-			children = (
-				AD22943F29FE527E009D8A78 /* Demo0404UITests.swift */,
-				AD22944129FE527E009D8A78 /* Demo0404UITestsLaunchTests.swift */,
-			);
-			path = Demo0404UITests;
 			sourceTree = "<group>";
 		};
 		AD22946929FE5414009D8A78 /* View */ = {
@@ -244,15 +219,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		AD94236A2A00F1120009678C /* API */ = {
-			isa = PBXGroup;
-			children = (
-				AD94236B2A00F1270009678C /* ImageUploader.swift */,
-				AD9423952A0102E80009678C /* UserDefaults.swift */,
-			);
-			name = API;
-			sourceTree = "<group>";
-		};
 		AD9423722A00F43F0009678C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +238,15 @@
 				AD9423802A00F4400009678C /* Info.plist */,
 			);
 			path = WidgetYomang;
+			sourceTree = "<group>";
+		};
+		ADC016A32A024A1100EB025B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AD94236B2A00F1270009678C /* ImageUploader.swift */,
+				AD9423952A0102E80009678C /* UserDefaults.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,7 +442,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD22943629FE527E009D8A78 /* Demo0404Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,8 +449,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD22944229FE527E009D8A78 /* Demo0404UITestsLaunchTests.swift in Sources */,
-				AD22944029FE527E009D8A78 /* Demo0404UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

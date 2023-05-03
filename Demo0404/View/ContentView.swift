@@ -11,7 +11,6 @@ struct ContentView: View {
     
     @EnvironmentObject var viewModel: AuthViewModel
     let timer = Timer.publish(every: 15, on: .main, in: .common).autoconnect()
-    
     var body: some View {
         ZStack {
             if viewModel.userSession == nil {
@@ -32,25 +31,16 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            print("here \(viewModel.currentUser)")
 //            AuthViewModel.shared.signOut()
+        }
+        .onReceive(timer, perform: { _ in
             if let user = viewModel.currentUser {
+                print("here \(viewModel.currentUser)")
                 if user.connected {
-                    viewModel.getImageUrl { imageUrl in
-                        print(imageUrl)
-                    }
+                    viewModel.getImageUrl()
                 }
             }
-        }
-//        .onReceive(timer, perform: { _ in
-//            if let user = viewModel.currentUser {
-//                if user.connected {
-//                    viewModel.getImageUrl { imageUrl in
-//                        print(imageUrl)
-//                    }
-//                }
-//            }
-//        })
+        })
     }
 }
 

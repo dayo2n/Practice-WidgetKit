@@ -115,7 +115,7 @@ class AuthViewModel: ObservableObject {
     // MARK: - 위치가 잘못된듯한 메소드 ....
     
     // TODO: 코드 정리 좀...
-    func getImageUrl(_ completion: @escaping(String) -> Void?) {
+    func getImageUrl() {
         // TODO: uploadImage에서 파트너 이미지 url까지 업로드하고 여기서는 파트너의 이미지를 조회하는게 나을듯
         guard let uid = AuthViewModel.shared.userSession?.uid else { return }
         let ref = Database.database().reference().ref
@@ -130,13 +130,9 @@ class AuthViewModel: ObservableObject {
                            let partnerImageUrl = partnerValue["imageUrl"] as? String{
                             print("== DEBUG: 불러온 image url \n\(partnerValue["imageUrl"] as! String)")
                             
-                            guard let url = URL(string: partnerImageUrl) else {
-                                return
-                            }
+                            guard let url = URL(string: partnerImageUrl) else { return }
                             URLSession.shared.dataTask(with: url) { data, response, error in
-                                guard let data = data, error == nil else {
-                                    return
-                                }
+                                guard let data = data, error == nil else { return }
                                 self.setImageInUserDefaults(UIImage: UIImage(data: data) ?? UIImage(), "widgetImage")
                             }.resume()
                         }
