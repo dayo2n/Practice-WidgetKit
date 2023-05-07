@@ -5,7 +5,7 @@
 .idea
 **/node_modules/*
 **/.firebaserc
-
+**/GoogleService-Info.plist
 ### Firebase Patch ###
 .runtimeconfig.json
 .firebase/
@@ -148,5 +148,8 @@ xcuserdata
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
+
+
+
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode,macos,swift,swiftpm,swiftpackagemanager,firebase
