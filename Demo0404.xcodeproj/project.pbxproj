@@ -87,7 +87,7 @@
 		AD22946129FE5302009D8A78 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AD22946329FE5317009D8A78 /* ConnectPartnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectPartnerView.swift; sourceTree = "<group>"; };
 		AD22946529FE5339009D8A78 /* UploadImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageView.swift; sourceTree = "<group>"; };
-		AD22946729FE53B2009D8A78 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AD22946729FE53B2009D8A78 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD9423682A00EFE00009678C /* WidgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetViewModel.swift; sourceTree = "<group>"; };
 		AD94236B2A00F1270009678C /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		AD9423712A00F43F0009678C /* WidgetYomangExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetYomangExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };

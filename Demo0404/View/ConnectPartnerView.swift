@@ -17,6 +17,7 @@ struct ConnectPartnerView: View {
             HStack {
                 Text("내코드")
                 Text("\(user.code)")
+                    .textSelection(.enabled)
             }
             HStack {
                 Text("연인과 연결하기")

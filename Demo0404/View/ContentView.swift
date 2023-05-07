@@ -14,12 +14,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             if viewModel.userSession == nil {
-                Text("LOGO")
-                    .onAppear {
-                        viewModel.signInAnonymously {
-
-                        }
-                    }
+                Text("재실행 필요")
             } else {
                 if let user = viewModel.currentUser {
                     if user.connected {
@@ -32,6 +27,11 @@ struct ContentView: View {
         }
         .onAppear {
 //            AuthViewModel.shared.signOut()
+            if viewModel.userSession == nil {
+                viewModel.signInAnonymously {
+                    
+                }
+            }
         }
         .onReceive(timer, perform: { _ in
             if let user = viewModel.currentUser {
